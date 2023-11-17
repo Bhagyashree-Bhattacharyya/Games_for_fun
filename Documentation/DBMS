@@ -1,0 +1,37 @@
+*Entities:*
+1. Users
+2. Cities
+3. Properties
+4. Amenities
+5. Testimonials
+
+*Relationships:*
+Users - Cities --> No, not related
+Users - Properties --> Yes, Users can mark favourite Properties
+Users - Amenities --> No, not related
+Users - Testimonials --> Yes, Users can give Testimonials
+Cities - Properties --> Yes, Cities contain Properties
+Cities - Amenities --> No, not related
+Cities - Testimonials --> No, not related
+Properties - Amenities --> Yes, Properties have Amenities
+Properties - Testimonials --> Yes, Properties give Testimonials
+Amenities - Testimonials --> No, not related 
+
+*Type of Relationships:*
+Users - Properties --> Many to Many
+Users - Testimonials --> One to Many
+Cities - Properties --> One to Many
+Properties - Amenities --> Many to Many
+Properties - Testimonials --> One to Many
+
+**Tables:**
+*Users - Properties --> Many to Many*
+interested_users_propertities (intermediate table) : User_id, Property_id (FK)
+*Users - Testimonials --> One to Many*
+User_id(PK) , Property_id (FK)
+*Cities - Properties --> One to Many*
+City_id(PK) , Property_id (FK)
+*Properties - Amenities --> Many to Many*
+proerties_amenities (intermediate table) : Property_id, Amenity_id (FK)
+*Properties - Testimonials --> One to Many*
+User_id(PK) , Property_id (FK)
