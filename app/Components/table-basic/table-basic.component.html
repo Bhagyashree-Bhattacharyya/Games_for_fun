@@ -1,0 +1,35 @@
+<table>
+	<thead>
+	  <tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>BranchType</th>
+		<th>DeliveryStatus</th>
+		<th>Taluk</th>
+		<th>Circle</th>
+		<th>District</th>
+		<th>Division</th>
+		<th>Region</th>
+		<th>State</th>
+		<th>Country</th>
+	  </tr>
+	</thead>
+	<tbody>
+		<ng-container>
+			<tr *ngFor="let row of deliveryAddress.PostOffice">
+				<td>{{ row.Name }}</td>
+				<td>{{ row.Description }}</td>
+				<td>{{ row.BranchType }}</td>
+				<td>{{ row.DeliveryStatus }}</td>
+				<td>{{ row.Taluk }}</td>
+				<td>{{ row.Circle }}</td>
+				<td>{{ row.District }}</td>
+				<td>{{ row.Division }}</td>
+				<td>{{ row.Region }}</td>
+				<td>{{ row.State }}</td>
+				<td>{{ row.Country }}</td>
+			</tr>
+		</ng-container>
+	</tbody>
+  </table>
+  
